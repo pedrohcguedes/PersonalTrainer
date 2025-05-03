@@ -1,0 +1,118 @@
+:root {
+    --bg-dark: #121212;
+    --bg-light: #f2f2f2;
+    --text-dark: #ffffff;
+    --text-light: #121212;
+    --primary: #ff5722;
+    --card-dark: #1e1e1e;
+    --card-light: #cebbbb;
+    --primary-light: #c09393;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    transition: all 0.3s ease;
+    padding: 2rem;
+  }
+
+  .container {
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+  }
+
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary);
+    margin-bottom: 1rem;
+  }
+
+  .profile-pic:hover{
+    transform: scale(1.05);
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: #aaa;
+    margin-bottom: 2rem;
+  }
+
+  .link-button {
+    background-color: var(--card-dark);
+    color: var(--text-dark);
+    border: none;
+    border-radius: 12px;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    width: 100%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+  }
+
+  .link-button:hover {
+    background-color: var(--primary);
+    transform: scale(1.03);
+  }
+
+  .toggle-mode {
+    margin-top: 2rem;
+    cursor: pointer;
+    background: none;
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    color: var(--primary);
+    transition: background 0.3s;
+  }
+
+  .toggle-mode:hover {
+    background-color: var(--primary);
+    color: white;
+  }
+
+  body.light {
+    background-color: var(--bg-light);
+    color: var(--text-light);
+  }
+
+  body.light p {
+    color: var(--bg-dark);
+  }
+
+  body.light .link-button {
+    background-color: var(--card-light);
+    color: var(--text-light);
+  }
+
+  body.light .link-button:hover {
+    background-color: var(--primary-light);
+    color: var(--text-light);
+  }
+
+  body.light .toggle-mode {
+    border-color: var(--text-light);
+    color: var(--text-light);
+  }
+
+  body.light .toggle-mode:hover {
+    background-color: var(--text-light);
+    color: var(--bg-light);
+  }
